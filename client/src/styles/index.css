@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-main: #f5f9ff;
+  --bg-secondary: #e8f1ff;
+  --text-main: #0c223f;
+  --text-muted: #4c5f79;
+  --card-bg: rgba(255, 255, 255, 0.88);
+  --card-border: rgba(11, 102, 213, 0.16);
+}
+
+.dark {
+  --bg-main: #06101f;
+  --bg-secondary: #0f1f37;
+  --text-main: #f2f7ff;
+  --text-muted: #9fb0ca;
+  --card-bg: rgba(9, 22, 42, 0.88);
+  --card-border: rgba(129, 177, 255, 0.2);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Manrope", sans-serif;
+  background:
+    radial-gradient(circle at 10% 20%, rgba(27, 128, 248, 0.18) 0%, rgba(27, 128, 248, 0) 35%),
+    radial-gradient(circle at 88% 10%, rgba(82, 196, 148, 0.2) 0%, rgba(82, 196, 148, 0) 28%),
+    linear-gradient(130deg, var(--bg-main), var(--bg-secondary));
+  color: var(--text-main);
+  transition: background 260ms ease, color 200ms ease;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.glass-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  backdrop-filter: blur(10px);
+}
+
+.section-title {
+  font-family: "Sora", sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(59, 130, 246, 0.5) transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: rgba(59, 130, 246, 0.5);
+  border-radius: 99px;
+}
